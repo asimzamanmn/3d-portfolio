@@ -8,16 +8,14 @@ const Landing = () => {
       <Navigation />
       
       {/* Hero Section with Spline */}
-      <section className="relative w-full h-[calc(100vh-4rem)] md:h-screen">
-        <iframe 
-          src='https://my.spline.design/elegantbeautyofdarkaestheticscopy-ueI8vcwJBAKq81WJ0lm01SRN/'
-          frameBorder='0'
-          width='100%'
-          height='100%'
-          className="absolute inset-0 w-full h-full"
-          title="3D Scene"
-          allow="autoplay; fullscreen; vr"
-        />
+      <section className="relative w-full pt-[56.25%] md:pt-0 h-0 md:h-screen">
+  <iframe 
+    src='https://my.spline.design/elegantbeautyofdarkaestheticscopy-ueI8vcwJBAKq81WJ0lm01SRN/'
+    frameBorder='0'
+    className="absolute top-0 left-0 w-full h-full"
+    title="3D Scene"
+    allow="autoplay; fullscreen; vr"
+  />
         
       </section>
 
