@@ -13,6 +13,7 @@ const Landing = () => {
           height='100%'
           className="absolute inset-0 w-full h-full"
           title="3D Scene"
+          allow="autoplay; fullscreen; vr"
         />
       </div>
     </div>
