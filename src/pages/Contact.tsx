@@ -1,4 +1,3 @@
-
 import Navigation from "../components/Navigation";
 
 const Contact = () => {
@@ -15,16 +14,16 @@ const Contact = () => {
             <div className="bg-zinc-900 p-6 rounded-lg border border-white/10">
               <h3 className="text-lg font-medium mb-4">Contact Information</h3>
               <div className="space-y-3 text-zinc-400">
-                <p>Email: hello@example.com</p>
-                <p>Location: New York, NY</p>
+                <p>Email: asimzamanmn@gmail.com</p>
+                <p>Phone: 7994875491</p>
+                <p>Location: Kochi, Kerala</p>
               </div>
             </div>
             <div className="bg-zinc-900 p-6 rounded-lg border border-white/10">
               <h3 className="text-lg font-medium mb-4">Social Links</h3>
               <div className="space-y-3 text-zinc-400">
-                <p>LinkedIn: @username</p>
-                <p>GitHub: @username</p>
-                <p>Twitter: @username</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/asimzamanmn" className="hover:underline" target="_blank" rel="noopener noreferrer">@asimzamanmn</a></p>
+                <p>GitHub: <a href="https://example.github.com" className="hover:underline" target="_blank" rel="noopener noreferrer">@example</a></p>
               </div>
             </div>
           </div>

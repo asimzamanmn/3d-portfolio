@@ -1,4 +1,3 @@
-
 import Navigation from "../components/Navigation";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
@@ -19,17 +18,7 @@ const Landing = () => {
           title="3D Scene"
           allow="autoplay; fullscreen; vr"
         />
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white space-y-4"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold">Creative Developer</h1>
-            <p className="text-lg md:text-xl text-white/80">Crafting digital experiences</p>
-          </motion.div>
-        </div>
+        
       </section>
 
       {/* About Section */}
@@ -45,23 +34,26 @@ const Landing = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6 text-white/80">
               <p className="text-lg">
-                I'm a creative developer passionate about building immersive digital experiences 
-                that merge design and technology.
+                I'm a Computer Science student at RSET, Kochi who’s passionate about solving real-world problems through creative tech solutions.
               </p>
               <p className="text-lg">
-                With expertise in React, Three.js, and WebGL, I create interactive 
-                websites that push the boundaries of web development.
+                From full-stack web apps and medical chatbots to climate awareness games, I explore the intersection of AI, design, and the web.
+              </p>
+              <p className="text-lg">
+                I’ve interned at NeST Digital and have experience with everything from Flask and LLaMA to deploying production-ready web systems.
               </p>
             </div>
             <div className="bg-white/5 rounded-lg p-6 space-y-4">
               <h3 className="text-xl font-semibold text-white">Skills</h3>
               <ul className="grid grid-cols-2 gap-4 text-white/80">
                 <li>React</li>
-                <li>Three.js</li>
-                <li>WebGL</li>
+                <li>Flask</li>
+                <li>Tailwind CSS</li>
+                <li>Python</li>
+                <li>LLaMA / Ollama</li>
+                <li>MongoDB & SQL</li>
                 <li>TypeScript</li>
-                <li>GSAP</li>
-                <li>Framer Motion</li>
+                <li>Premiere Pro</li>
               </ul>
             </div>
           </div>
@@ -79,16 +71,33 @@ const Landing = () => {
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">Featured Projects</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {[1, 2, 3, 4].map((item) => (
+            {[
+              {
+                title: "Medifluent",
+                desc: "A Flask-based AI medical assistant powered by LLaMA 3, helping users find drugs, remedies, and nearby hospitals.",
+              },
+              {
+                title: "E-Waste Management Platform",
+                desc: "A web-based solution for logging and rewarding e-waste deposits using Google Maps & image uploads.",
+              },
+              {
+                title: "Loop of Hope (NASA Hackathon)",
+                desc: "An educational game showing how daily decisions impact climate, built for the NASA Space Apps Challenge.",
+              },
+              {
+                title: "Event Manager App",
+                desc: "A Node.js + MongoDB application that lets users create events, RSVP, and manage attendees in real-time.",
+              },
+            ].map((project, index) => (
               <motion.div
-                key={item}
+                key={index}
                 whileHover={{ scale: 1.02 }}
                 className="bg-white/5 rounded-lg overflow-hidden cursor-pointer"
               >
-                <div className="aspect-video bg-white/10"></div>
+                <div className="aspect-video bg-white/10" />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-2">Project {item}</h3>
-                  <p className="text-white/60">A brief description of the project and its key features.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                  <p className="text-white/60">{project.desc}</p>
                 </div>
               </motion.div>
             ))}
